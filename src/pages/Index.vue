@@ -8,7 +8,7 @@
         v-model="slide"
         infinite
         arrows
-        :autoplay=true
+        :autoplay="autoplay"
         transition-prev="slide-right"
         transition-next="slide-left"
         @mouseenter="autoplay = false"
@@ -191,6 +191,7 @@ export default {
   name: 'PageIndex',
   data () {
     return {
+      autoplay: true,
       slide: 1,
       slide2: 1,
       slide3: 1,
