@@ -1,0 +1,75 @@
+<template>
+  <div class="q-pa-md">
+    <router-link class="image" :to="'/product/'+product._id">
+      <q-img :src="product.image1" />
+    </router-link>
+    <div class="text-center q-py-xs">
+      <div class="text-h6">
+        {{ product.name }}
+      </div>
+    </div>
+
+    <div class="text-subtitle2 text-center">
+      NT${{ product.price }}
+    </div>
+    <div class="text-center">
+      <q-btn flat class="text-product" @click="addCart">加入購物車</q-btn>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ProductCard',
+  props: {
+    product: {
+      type: Object,
+      required: true
+    }
+  },
+  methods: {
+    addCart () {
+      if (this.$store.state.user.jwt.token.length === 0) {
+        this.$store.commit('user/beforeLogin', this.product._id)
+        this.$q.notify({
+          message: '已加入購物車',
+          timeout: 1000,
+          type: 'positive',
+          color: 'faded',
+          textColor: 'white',
+          position: 'top'
+        })
+      } else {
+        this.$store.dispatch('user/addCart', { product: this.product._id }).then((res) => {
+          this.$q.notify({
+            message: '已加入購物車',
+            timeout: 1000,
+            type: 'positive',
+            color: 'faded',
+            textColor: 'white',
+            position: 'top'
+          })
+        })
+          .catch((error) => {
+            console.log(error)
+            this.$q.notify({
+              message: '加入購物車失敗',
+              timeout: 1000,
+              type: 'negative',
+              color: 'faded',
+              textColor: 'white',
+              position: 'top'
+            })
+          })
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.image:hover {
+  filter: opacity(0.5);
+  transition: .5s;
+}
+</style>

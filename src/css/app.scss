@@ -1,0 +1,969 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+  color: #565656;
+}
+
+// 註冊登入
+.bg-brand {
+  background: #BDC0BA;
+}
+
+.bg-admin {
+  background: #577C8A;
+}
+
+// 新增商品、最新消息
+.bg-add {
+  background: #91989F;
+}
+
+// 編輯商品
+.bg-edit {
+  background: #CA7853;
+  color: #fff;
+}
+
+// 總額
+.bg-cart {
+  background: #91989F;
+  color: #fff;
+}
+
+// 結帳
+.bg-cart-red {
+  background: #9F353A;
+  color: #fff;
+  font-size: 1rem;
+}
+
+// 結帳
+.text-cart {
+  color: #D05A6E;
+}
+
+// 加入購物車
+.text-product {
+  color: #B19693
+}
+
+// 麵包屑
+.text-bread {
+  color: #B19693;
+}
+
+// nav
+.text-option {
+  color: #a3a3a3;
+  font-size: 1rem;
+  width: 33.3333%;
+}
+
+// header
+.text-icon {
+  color: #565656;
+}
+
+// 通用樣式
+.container {
+  width: 100%;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// .q-tabs__content--align-center {
+//   justify-content: space-around;
+// }
+
+.q-table thead tr {
+  background: #f0f1f3;
+  color: #9a9ea2;
+}
+
+.q-avatar {
+  border-radius: 5px;
+}
+
+// 首頁
+#index {
+  .container {
+    padding: 80px 0 0 0;
+  }
+  
+  .index-carousel {
+    & .q-carousel__slide {
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .image {
+    width: 150px;
+  }
+
+  .about-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #644e50;
+    text-align: center;
+  }
+
+  .about-text {
+    white-space: pre-line;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  .feedback1 {
+    display: none;
+  }
+
+  .feedback2 {
+    & .q-carousel__slide {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+// productlist
+.tab {
+  display: block;
+}
+
+.sidebar {
+  display: none;
+}
+
+// cart
+// 運送方式
+.button-group {
+  display: flex;
+  flex-direction: column;
+  &.delivery-btn {
+    width: 100%;
+  }
+}
+
+#cart {
+  .container {
+    padding: 30px 0 30px 0;
+  }
+  .face-text {
+    font-size: 14px;
+  }
+}
+
+// 數量加減
+.cart-input {
+  width: 100px;
+}
+
+// singleproduct
+// 輪播圖
+.q-carousel__navigation-inner {
+  justify-content: flex-end;
+}
+
+.q-carousel__navigation--bottom {
+  bottom: -130px;
+}
+
+.q-carousel__navigation--top, .q-carousel__navigation--bottom {
+  left: 170px;
+}
+
+.q-carousel .q-carousel__thumbnail {
+  margin: 2px;
+  height: 45px;
+  border: 1px solid transparent;
+}
+
+// 商品介紹 tab
+.q-tab__label {
+  font-size: 13px;
+}
+
+// 分隔線
+.line {
+  height: 55px
+}
+
+// 單頁商品概要
+.right-text {
+  padding: 20px;
+}
+
+// faq
+// 對話框
+.q-message-text--sent {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #7DB9DE;
+  width: 230px;
+}
+
+.q-message-text--received {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ece1c9;
+  width: 230px;
+}
+
+// news
+.post-row {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0px 50px 0px;
+  border-style: none;
+}
+
+.post-title {
+  padding-top: 15px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  // 首頁
+  #index {
+    .container {
+      padding: 80px 0 0 0;
+    }
+    
+    .index-carousel {
+      height: 500px;
+      & .q-carousel__slide {
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .image {
+      width: 150px;
+    }
+  }
+
+  #cart {
+    .container {
+      padding: 30px 15px 30px 15px;
+    }
+  }
+
+  // 輪播圖
+  .q-carousel__navigation--bottom {
+    bottom: 80px;
+  }
+  
+  .q-carousel__navigation--top, .q-carousel__navigation--bottom {
+    left: 4px;
+  }
+  
+  .q-carousel .q-carousel__thumbnail {
+    margin: 2px;
+    height: 45px;
+    border: 1px solid transparent;
+  }
+
+  // 商品介紹 tab
+  .q-tab__label {
+    font-size: 1rem;
+  }
+
+  // 單頁商品圖
+  .left-image {
+    padding-top: 20px;
+  }
+
+  // 分隔線
+  .line {
+    height: 70px
+  }
+
+  // 最小尺寸圖片滿版，預設 cover
+  .q-carousel__slide {
+    background-size: contain;
+    background-position: initial;
+    background-repeat: no-repeat;
+  }
+
+  // 最新消息
+  .post-row {
+    margin: 50px 50px 50px 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  // 首頁
+  #index {
+    .container {
+      padding: 80px 0 0 0;
+    }
+    
+    .index-carousel {
+      height: 600px;
+      & .q-carousel__slide {
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .image {
+      width: 150px;
+    }
+
+    .about-title {
+      text-align: left;
+    }
+
+    .about-text {
+      text-align: left;
+      line-height: 1.3;
+      padding-right: 20px;
+    }
+
+    
+    .feedback2 {
+      display: none;
+    }
+
+    .feedback1 {
+      display: block;
+      & .q-img__image {
+        background-size: contain !important;
+      }
+    }
+  }
+
+  #cart {
+    .container {
+      padding: 30px 30px 30px 30px;
+    }
+
+    .face-text {
+    font-size: 1rem;
+  }
+  }
+
+  // 運送方式
+  .button-group {
+    flex-direction: row;
+    & .delivery-btn {
+      width: 33.3333%;
+    }
+  }
+
+  .delivery-btn~.delivery-btn {
+    margin-left: 2%;
+  }
+
+   // 收件人資訊
+  .info {
+    display: flex;
+    flex-direction: row;
+    & .person-info {
+      width: 50%;
+    }
+    & .face-text {
+      width: 50%;
+    }
+  }
+
+  // 輪播圖
+  .q-carousel__navigation--bottom {
+    bottom: 30px;
+  }
+  
+  .q-carousel__navigation--top, .q-carousel__navigation--bottom {
+    left: -2px;
+  }
+  
+  .q-carousel .q-carousel__thumbnail {
+    margin: 8px;
+    height: 50px;
+    border: 1px solid transparent;
+  }
+
+  // 單頁商品圖
+  .left-image {
+    padding: 20px;
+  }
+
+  // 分隔線
+  .line {
+    height: 100px
+  }
+
+  // 對話框
+  .q-message-text--sent {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #7DB9DE;
+    width: 300px;
+  }
+
+  .q-message-text--received {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ece1c9;
+    width: 550px;
+  }
+
+  // 最新消息
+  .post-row {
+    display: flex;
+    flex-direction: row;
+    margin: 75px 15px 75px 15px;
+  }
+
+  .post-text {
+    margin-left: 40px;
+  }
+
+  .post-title {
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  // 首頁
+  #index {
+    .container {
+      padding: 80px 50px 0 50px;
+    }
+    
+    .index-carousel {
+      height: 700px;
+      & .q-carousel__slide {
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .image {
+      width: 200px;
+    }
+
+    .about-text {
+      line-height: 2.2;
+      padding-right: 20px;
+    }
+
+    .feedback1 {
+      padding: 0 40px;
+      & .q-img__image {
+        background-size: cover !important;
+      }
+    }
+  }
+
+  #cart {
+    .container {
+      padding: 30px 80px 30px 80px;
+    }
+  }
+
+  .sidebar {
+    display: block;
+  }
+
+  .sidebar {
+    & .q-item:hover {
+      background: #f0f1f3;
+    }
+  }
+
+  .tab {
+    display: none;
+  }
+
+  // 面交地點
+  .face-text {
+    margin: 20px;
+  }
+
+  // 數量加減
+  .cart-input {
+    width: 100%;
+  }
+
+  // 輪播圖
+  .q-carousel__navigation--bottom {
+    bottom: -65px;
+  }
+
+  .q-carousel__navigation--top, .q-carousel__navigation--bottom {
+    left: -10px;
+  }
+
+  .q-carousel .q-carousel__thumbnail {
+    margin: 20px;
+    height: 55px;
+    border: 1px solid transparent;
+  }
+
+  // 單頁商品圖
+  .left-image {
+    padding: 30px;
+  }
+
+  .right-text {
+    padding: 30px;
+  }
+
+  // 最新消息
+  .post-row {
+    margin: 75px 100px 75px 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  // 首頁
+  #index {
+    .container {
+      padding: 80px 80px 0 80px;
+    }
+    
+    .index-carousel {
+      height: 800px;
+      & .q-carousel__slide {
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .image {
+      width: 200px;
+    }
+
+    .about-text {
+      line-height: 3;
+    }
+  }
+
+  #cart {
+    .container {
+      padding: 30px 100px 50px 100px;
+    }
+  }
+
+  .face-text {
+    margin: 30px;
+    line-height: 2;
+  }
+
+  // 輪播圖
+  .carousel .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .q-carousel__navigation--bottom {
+    bottom: -22px;
+  }
+
+  .q-carousel__navigation--top, .q-carousel__navigation--bottom {
+    left: 405px;
+  }
+
+  .q-carousel .q-carousel__thumbnail {
+    margin: 23px;
+    height: 65px;
+    border: 2px solid lightgrey;
+  }
+
+  // 單頁商品圖
+  .left-image {
+    padding: 0px;
+  }
+
+  .right-text {
+    padding: 30px;
+  }
+
+  // 最新消息
+  .post-row {
+    margin: 75px 200px 75px 200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+// 單頁
+#mainlayout {
+  .q-toolbar__title {
+    padding: 0;
+  }
+  
+  .q-toolbar {
+    padding: 0;
+  }
+  
+  .nav {
+    text-align: center;
+    border-top: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
+  }
+}
+
+#adminproducts, #adminnews {
+  // .q-table--no-wrap th, .q-table--no-wrap td {
+  //   white-space: normal;
+  // }
+
+  // 編輯按鈕
+  .q-btn__wrapper {
+    padding: 2px 12.5px;
+    min-height: 1.5em;
+  }
+
+  // 說明文字
+  .text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    max-width: 170px;
+  }
+
+  // 刪除圖片
+  .delfile {
+    position: absolute;
+    color: #9a9ea2;
+  }
+}
+  
+#productlist {
+  .menu-link {
+    color: #fff;
+    background: #B9887D;
+  }
+}
+  
+#singleproduct {
+  // 輪播圖
+  .q-panel-parent {
+    overflow: unset;
+  }
+
+  .q-carousel__navigation--top, .q-carousel__navigation--bottom {
+    overflow-x: unset;
+    overflow-y: unset;
+  }
+
+  .q-img__image {
+    background-size: contain !important;
+    background-position: 0 0 !important;
+  }
+
+  input::-webkit-outer-spin-button, 
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .product-input {
+    width: 200px;
+
+    div {
+      height: 32px !important;
+      padding: 0 2px;
+    }
+
+    div.no-wrap, .q-btn__wrapper {
+      padding: 0;
+    }
+
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    input {
+      text-align: center;
+    }
+
+    .number-btn {
+      background-color: #f5f7f9;
+      border: 1px solid #ccc;
+      height: 100%;
+    }
+  }
+
+  .q-tab-panels {
+    white-space: pre-line;
+    line-height: 2;
+    text-align: center;
+  }
+}
+
+#cart {
+  .q-table thead, .q-table tr, .q-table th, .q-table td {
+    border: none;
+  }
+
+  .cart-circle-1 {
+    position: relative;
+    padding-left: 34px;
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .cart-circle-1::before {
+    content: '1';
+    font-family: 'Open Sans', sans-serif;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #565656;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .cart-circle-2 {
+    position: relative;
+    padding-left: 34px;
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .cart-circle-2::before {
+    content: '2';
+    font-family: 'Open Sans', sans-serif;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #565656;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .cart-circle-3 {
+    position: relative;
+    padding-left: 34px;
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .cart-circle-3::before {
+    content: '3';
+    font-family: 'Open Sans', sans-serif;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #565656;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .cart-circle-4 {
+    position: relative;
+    padding-left: 34px;
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .cart-circle-4::before {
+    content: '4';
+    font-family: 'Open Sans', sans-serif;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #565656;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  // 刪除按鈕 hover 設定 
+  body.desktop .q-focusable:focus .q-focus-helper,
+  body.desktop .q-hoverable:hover .q-focus-helper {
+    background: inherit;
+    opacity: 0;
+  }
+  body.ios .q-hoverable:active .q-focus-helper {
+    background: inherit;
+    opacity: 0;
+  }
+  .q-focus-helper {
+    opacity: 0;
+    transition: unset;
+  }
+
+  .clear-btn {
+    color: #9a9ea2;
+  }
+
+  .clear-btn:hover {
+    color: rgb(224, 224, 224);
+  }
+
+  // 數量加減
+  .cart-input {
+    div {
+      height: 32px !important;
+      padding: 0 2px;
+    }
+
+    div.no-wrap, .q-btn__wrapper {
+      padding: 0;
+    }
+
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    input {
+      text-align: center;
+    }
+
+    .number-btn {
+      background-color: #f5f7f9;
+      border: 1px solid #ccc;
+      height: 100%;
+    }
+  }
+
+  .face-text {
+    color: #9F353A;
+    white-space: pre-line;
+  }
+
+  .delivery-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 1rem;
+    &:hover {
+      border: 2px solid #D05A6E;
+    }
+    & .q-btn__content {
+      justify-content: space-between;
+    }
+    & .icon {
+      font-size:1.2rem;
+      color: grey;
+    }
+  }
+
+  .q-field__label {
+    font-size: 14px;
+  }
+
+  .border {
+    border: 2px solid #D05A6E;
+  }
+}
+
+#orders, #adminorders, #singleorders, #adminsingleorders, #cart {
+  .order-link {
+    color:#77969A
+  }
+
+  .order-link:hover {
+    text-decoration: underline;
+  }
+}
+
+#singleorders, #adminsingleorders {
+  .q-table__card {
+    border-radius: 4px 4px 0 0;
+  }
+
+  .sum {
+    font-size: 14px;
+    font-weight: bold;
+    background: #f0f1f3;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+#news {
+  .post-title {
+    color: #9F353A;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .post-description {
+    color: #565656;
+    line-height: 1.5;
+    white-space: pre-line;
+  }
+}
+.favorite{
+  width: 290px;
+  padding: 10px 0;
+
+  .q-item__section:nth-child(1) {
+    flex: 0 1 20%;
+  }
+
+  .q-item__section:nth-child(2) {
+    flex: 0 1 50%;
+  }
+
+  .q-item__section:nth-child(3) {
+    flex: 0 1 20%;
+  }
+
+  .q-item__section:nth-child(4) {
+    flex: 0 1 10%;
+    align-items: flex-end;
+    margin: 0;
+    padding-bottom: 3px;
+  }
+}
+
+#index { 
+  .image:hover {
+    filter: opacity(0.5);
+    transition: .5s;
+  }
+}
