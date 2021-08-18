@@ -207,6 +207,10 @@ export default {
         }
         return product
       })
+      this.products = this.products.filter(product => {
+        product = product.description.includes('本月熱銷')
+        return product
+      })
     } catch (error) {
       this.$q.notify({
         message: '取得商品失敗',

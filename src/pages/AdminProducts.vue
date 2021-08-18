@@ -95,7 +95,7 @@
               <q-input label="價格" stack-label outlined v-model="editForm.model.price"
                 :rules="[
                   val => !!val || '請輸入價格',
-                  val => val > 0 || '請輸入正確價格',
+                  val => val >= 0 || '請輸入正確價格',
                 ]"
               ></q-input>
             </div>
@@ -186,7 +186,7 @@ export default {
         data: null,
         model: {
           name: '',
-          price: 0,
+          price: '',
           description: '',
           category: '',
           date: '',
@@ -280,7 +280,7 @@ export default {
         }
         this.editForm.model = {
           name: '',
-          price: 0,
+          price: '',
           description: '',
           category: '',
           date: '',
@@ -306,7 +306,7 @@ export default {
     cancelEdit () {
       this.editForm.model = {
         name: '',
-        price: 0,
+        price: '',
         description: '',
         category: '',
         date: '',
