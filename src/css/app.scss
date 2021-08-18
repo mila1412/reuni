@@ -209,14 +209,14 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: #7DB9DE;
-  width: 230px;
+  width: 200px;
 }
 
 .q-message-text--received {
   font-size: 14px;
   line-height: 1.5;
   color: #ece1c9;
-  width: 230px;
+  width: 220px;
 }
 
 // news
@@ -928,12 +928,12 @@ body {
     color: #9F353A;
     font-size: 1.2rem;
     font-weight: bold;
-    text-align: center;
+    margin-bottom: 3px;
   }
 
   .post-description {
     color: #565656;
-    line-height: 1.5;
+    line-height: 1.6;
     white-space: pre-line;
   }
 }

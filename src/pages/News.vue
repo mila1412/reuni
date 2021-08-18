@@ -17,7 +17,10 @@
           <q-img :src="post.image1" />
         </div>
         <div class="col-12 col-lg-5 post-text">
-          <p class="post-title">{{ post.title }}</p>
+          <div class="text-center">
+            <p class="post-title">{{ post.title }}</p>
+            <q-badge outline style="color: #9F353A; margin-bottom: 16px;">{{ post.date }}</q-badge>
+          </div>
           <p class="post-description">{{ post.description }}</p>
         </div>
       </div>
@@ -37,6 +40,7 @@ export default {
     try {
       const { data } = await this.$axios.get('/news')
       this.posts = data.result.map(post => {
+        post.date = new Date(post.date).toLocaleDateString()
         if (post.image1) {
           post.image1 = `${process.env.API_URL}/files/${post.image1}`
         }

@@ -16,10 +16,11 @@
         <div style="width: 100%;">
           <!-- 取貨 -->
           <q-chat-message
-            :text="['你好，我想買你們的甜點，請問要怎麼取貨？可以面交嗎？']"
+            :text="['你好，我想買你們的甜點，請問要怎麼取貨？']"
             sent
             text-color="white"
             bg-color="blue-grey-3"
+            style="padding-bottom:30px"
           >
             <template v-slot:name>You</template>
             <template v-slot:stamp>5 minutes ago</template>
@@ -30,7 +31,7 @@
               >
             </template>
           </q-chat-message>
-          <q-chat-message class="bg-chart">
+          <q-chat-message class="bg-chart" style="padding-bottom:30px">
             <template v-slot:name>任由尼小編</template>
             <template v-slot:avatar>
               <img
@@ -47,10 +48,11 @@
 
           <!-- 付款 -->
           <q-chat-message
-            :text="['那要怎麼付款？有貨到付款嗎？']"
+            :text="['可以貨到付款嗎？']"
             sent
             text-color="white"
             bg-color="blue-grey-3"
+            style="padding-bottom:30px"
           >
             <template v-slot:name>You</template>
             <template v-slot:avatar>
@@ -60,7 +62,7 @@
               >
             </template>
           </q-chat-message>
-          <q-chat-message class="bg-chart">
+          <q-chat-message class="bg-chart" style="padding-bottom:30px">
             <template v-slot:name>任由尼小編</template>
             <template v-slot:avatar>
               <img
@@ -74,10 +76,11 @@
 
           <!-- 宅配注意事項 -->
           <q-chat-message
-            :text="['但我聽說現在疫情很多人訂包裹，宅配會不會把甜點撞壞啊？']"
+            :text="['聽說現在疫情很多人訂包裹，宅配會不會把甜點撞壞呢？']"
             sent
             text-color="white"
             bg-color="blue-grey-3"
+            style="padding-bottom:30px"
           >
             <template v-slot:name>You</template>
             <template v-slot:avatar>
@@ -87,7 +90,7 @@
               >
             </template>
           </q-chat-message>
-          <q-chat-message class="bg-chart">
+          <q-chat-message class="bg-chart" style="padding-bottom:30px">
             <template v-slot:name>任由尼小編</template>
             <template v-slot:avatar>
               <img
@@ -101,10 +104,11 @@
 
           <!-- 面交地點 -->
           <q-chat-message
-            :text="['了解，這是要送人的，我還是面交好了...可以選在捷運站附近嗎？']"
+            :text="['了解，這是要送人的，我還是面交好了。可以選在捷運站附近嗎？']"
             sent
             text-color="white"
             bg-color="blue-grey-3"
+            style="padding-bottom:30px"
           >
             <template v-slot:name>You</template>
             <template v-slot:avatar>
@@ -114,7 +118,7 @@
               >
             </template>
           </q-chat-message>
-          <q-chat-message class="bg-chart">
+          <q-chat-message class="bg-chart" style="padding-bottom:30px">
             <template v-slot:name>任由尼小編</template>
             <template v-slot:avatar>
               <img
@@ -140,6 +144,7 @@
             sent
             text-color="white"
             bg-color="blue-grey-3"
+            style="padding-bottom:30px"
           >
             <template v-slot:name>You</template>
             <template v-slot:avatar>
@@ -149,7 +154,7 @@
               >
             </template>
           </q-chat-message>
-          <q-chat-message class="bg-chart">
+          <q-chat-message class="bg-chart" style="padding-bottom:30px">
             <template v-slot:name>任由尼小編</template>
             <template v-slot:avatar>
               <img
@@ -167,6 +172,7 @@
             sent
             text-color="white"
             bg-color="blue-grey-3"
+            style="padding-bottom:30px"
           >
             <template v-slot:name>You</template>
             <template v-slot:avatar>
@@ -176,7 +182,7 @@
               >
             </template>
           </q-chat-message>
-          <q-chat-message class="bg-chart">
+          <q-chat-message class="bg-chart" style="padding-bottom:30px">
             <template v-slot:name>任由尼小編</template>
             <template v-slot:avatar>
               <img
