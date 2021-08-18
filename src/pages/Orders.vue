@@ -47,16 +47,6 @@ export default {
     }
   },
   async mounted () {
-    if (this.table.data.length === 0) {
-      this.$q.notify({
-        message: '目前還沒有訂單喔',
-        timeout: 1000,
-        type: 'negative',
-        color: 'faded',
-        textColor: 'white',
-        position: 'top'
-      })
-    }
     try {
       const { data } = await this.$axios.get('/orders', {
         headers: {
@@ -80,7 +70,16 @@ export default {
         }
         return order
       })
-      console.log(this.table.data)
+      if (this.table.data.length === 0) {
+        this.$q.notify({
+          message: '目前還沒有訂單喔',
+          timeout: 1000,
+          type: 'negative',
+          color: 'faded',
+          textColor: 'white',
+          position: 'top'
+        })
+      }
     } catch (error) {
       this.$q.notify({
         message: '取得訂單失敗',

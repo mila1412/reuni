@@ -391,16 +391,6 @@ export default {
     }
   },
   async mounted () {
-    if (this.table.data.length === 0) {
-      this.$q.notify({
-        message: '購物車還沒有商品喔',
-        timeout: 1000,
-        type: 'negative',
-        color: 'faded',
-        textColor: 'white',
-        position: 'top'
-      })
-    }
     try {
       const { data } = await this.$axios.get('/users/cart', {
         headers: {
@@ -413,6 +403,16 @@ export default {
         item.number = item.amount
         return item
       })
+      if (this.table.data.length === 0) {
+        this.$q.notify({
+          message: '購物車還沒有商品喔',
+          timeout: 1000,
+          type: 'negative',
+          color: 'faded',
+          textColor: 'white',
+          position: 'top'
+        })
+      }
     } catch (error) {
       this.$q.notify({
         message: '取得購物車失敗',
