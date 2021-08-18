@@ -159,7 +159,7 @@ export default {
           fd.append(key, this.editForm.model[key])
         }
         if (this.editForm.model._id.length === 0) {
-          const { data } = await this.$axios.post('/news', fd, {
+          await this.$axios.post('/news', fd, {
             headers: {
               authorization: 'Bearer ' + this.$store.state.user.jwt.token
             }
