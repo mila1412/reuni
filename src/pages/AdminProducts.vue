@@ -403,10 +403,18 @@ export default {
         }
       })
       this.table.data = data.result.map(data => {
-        data.image11 = `${process.env.API_URL}/files/${data.image1}`
-        data.image22 = `${process.env.API_URL}/files/${data.image2}`
-        data.image33 = `${process.env.API_URL}/files/${data.image3}`
-        data.image44 = `${process.env.API_URL}/files/${data.image4}`
+        if (data.image1) {
+          data.image11 = `${process.env.API_URL}/files/${data.image1}`
+        }
+        if (data.image2) {
+          data.image22 = `${process.env.API_URL}/files/${data.image2}`
+        }
+        if (data.image3) {
+          data.image33 = `${process.env.API_URL}/files/${data.image3}`
+        }
+        if (data.image4) {
+          data.image44 = `${process.env.API_URL}/files/${data.image4}`
+        }
         return data
       })
     } catch (error) {

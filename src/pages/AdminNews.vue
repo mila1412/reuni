@@ -36,12 +36,11 @@
           </q-td>
         </template>
         <!-- 圖片 -->
-        <template v-slot:body-cell-image1="props">
+        <template v-slot:body-cell-image11="props">
           <q-td :props="props">
             <q-avatar size="50px">
-              <img :src="props.row.image1">
+              <img :src="props.row.image11">
             </q-avatar>
-            <q-icon name="close" @click="delFile(props.row)" class="delfile cursor-pointer" />
           </q-td>
         </template>
         <!-- 編輯 -->
@@ -128,7 +127,7 @@ export default {
           rowsPerPage: 10
         },
         columns: [
-          { name: 'image1', field: 'image1', align: 'center', label: '圖片' },
+          { name: 'image11', field: 'image11', align: 'center', label: '圖片' },
           { name: 'title', field: 'title', align: 'center', label: '標題', style: 'width: 200px' },
           { name: 'description', field: 'description', align: 'center', label: '說明', style: 'width: 200px' },
           { name: 'date', field: 'date', align: 'center', label: '上架時間', sortable: true },
@@ -164,9 +163,10 @@ export default {
             headers: {
               authorization: 'Bearer ' + this.$store.state.user.jwt.token
             }
+          }).then((response) => {
+            this.editForm.model._id = response.data.result._id
+            this.table.data.push({ ...this.editForm.model, image11: `${process.env.API_URL}/files/${response.data.result.image1}` })
           })
-          this.table.data.push(this.editForm.model)
-          this.editForm.model.image1 = `${process.env.API_URL}/files/${data.result.image1}`
         } else {
           const { data } = await this.$axios.patch('/news/' + this.editForm.model._id, fd, {
             headers: {
@@ -176,7 +176,7 @@ export default {
           for (const field in this.editForm.model) {
             this.editForm.data[field] = this.editForm.model[field]
           }
-          this.editForm.data.image1 = `${process.env.API_URL}/files/${data.result.image1}`
+          this.editForm.data.image11 = `${process.env.API_URL}/files/${data.result.image1}`
         }
         this.editForm.model = {
           title: '',
@@ -206,25 +206,6 @@ export default {
         image1: null,
         _id: ''
       }
-    },
-    async delFile (row) {
-      try {
-        await this.$axios.patch('/news/' + row._id + '/image1', { image1: '' }, {
-          headers: {
-            authorization: 'Bearer ' + this.$store.state.user.jwt.token
-          }
-        })
-        row.image1 = ''
-      } catch (error) {
-        this.$q.notify({
-          message: '刪除圖片失敗',
-          timeout: 1000,
-          type: 'negative',
-          color: 'faded',
-          textColor: 'white',
-          position: 'top'
-        })
-      }
     }
   },
   async mounted () {
@@ -237,7 +218,7 @@ export default {
       this.table.data = data.result.map(data => {
         // data.date = new Date(data.date).toLocaleDateString()
         if (data.image1) {
-          data.image1 = `${process.env.API_URL}/files/${data.image1}`
+          data.image11 = `${process.env.API_URL}/files/${data.image1}`
         }
         return data
       })
