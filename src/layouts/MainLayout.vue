@@ -8,12 +8,12 @@
             <!-- logo -->
             <div class="text-center mobile-hide">
               <router-link to='/'>
-                <q-img :src="require('../assets/logo.png')" style="width: 180px; margin: 20px 0 20px 0px" />
+                <q-img :src="require('../assets/logoword.png')" style="width: 180px; margin: 20px 0 20px 0px" />
               </router-link>
             </div>
             <div class="mobile-only">
               <router-link to='/'>
-                <q-img :src="require('../assets/logo.jpg')" style="width: 50px" />
+                <q-img :src="require('../assets/logo.png')" style="width: 100px; margin: 20px" />
               </router-link>
             </div>
             <!-- icon -->
@@ -82,7 +82,7 @@
             </span>
           </div>
           <!-- tab 選單 -->
-          <div class="nav flex justify-between">
+          <div class="nav flex justify-center">
             <q-btn flat :ripple="false" class="text-option" to='/news'>♡ 最新消息</q-btn>
             <q-btn flat :ripple="false" class="text-option" to='/productlist'>♡ 商品列表</q-btn>
             <q-btn flat :ripple="false" class="text-option" to='/FAQ'>♡ 常見問題</q-btn>
@@ -91,15 +91,11 @@
       </q-toolbar>
     </q-header>
 
-    <q-page-container class="mobile-hide" style="padding:120px 0px 120px 0">
+    <q-page-container>
       <router-view />
     </q-page-container>
 
-    <q-page-container class="mobile-only" style="padding:90px 0px 120px 0">
-      <router-view />
-    </q-page-container>
-
-    <q-footer class="bg-grey-8 text-white">
+    <q-footer class="bg-grey-7 text-white">
       <q-toolbar>
         <q-toolbar-title class="text-center">
           <div class="q-pa-sm">

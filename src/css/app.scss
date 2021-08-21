@@ -11,8 +11,14 @@ body {
 }
 
 // 註冊登入
-.bg-brand {
-  background: #BDC0BA;
+.bg-login {
+  // background: #86A697;
+  background: #577C8A;
+}
+
+.text-login {
+  // background: #86A697;
+  color: #577C8A;
 }
 
 .bg-admin {
@@ -60,7 +66,7 @@ body {
 
 // nav
 .text-option {
-  color: #a3a3a3;
+  color: #B19693;
   font-size: 1rem;
   width: 33.3333%;
 }
@@ -79,9 +85,9 @@ body {
   margin-right: auto;
 }
 
-// .q-tabs__content--align-center {
-//   justify-content: space-around;
-// }
+.q-item.q-router-link--active, .q-item--active {
+  color: #B19693
+}
 
 .q-table thead tr {
   background: #f0f1f3;
@@ -95,14 +101,19 @@ body {
 // 首頁
 #index {
   .container {
-    padding: 80px 0 0 0;
+    padding: 70px 0 0 0;
   }
   
   .index-carousel {
+    // height: 400px;
     & .q-carousel__slide {
       background-size: cover;
       background-position: center;
     }
+  }
+
+  .index-title {
+    font-size: 1.8rem;
   }
 
   .image {
@@ -132,6 +143,50 @@ body {
       background-repeat: no-repeat;
       background-position: 50% 50%;
     }
+  }
+}
+
+// register
+#register {
+  .bg-image {
+    height: 100vh;
+    width: 100%;
+    background: url('~assets/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+  }
+
+  .bg-form {
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // z-index: 2;
+  }
+}
+
+// login
+#login {
+  .bg-image {
+    height: 80vh;
+    width: 100%;
+    background: url('~assets/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+  }
+
+  .bg-form {
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // z-index: 2;
   }
 }
 
@@ -236,6 +291,11 @@ body {
     max-width: 540px;
   }
 
+  // mainlayou nav
+  .text-option {
+    width: 25%;
+  }
+
   // 首頁
   #index {
     .container {
@@ -321,6 +381,10 @@ body {
         background-size: cover;
         background-position: center;
       }
+    }
+
+    .index-title {
+      font-size: 2rem;
     }
 
     .image {
@@ -555,12 +619,22 @@ body {
       }
     }
 
+    .index-title {
+      font-size: 2.2rem;
+    }
+
     .image {
       width: 200px;
     }
 
     .about-text {
       line-height: 3;
+    }
+  }
+
+  #faq {
+    .fax-container {
+      padding: 50px 150px 20px 150px;
     }
   }
 
@@ -614,6 +688,17 @@ body {
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+  }
+
+  // mainlayou nav
+  .text-option {
+    width: 20%;
+  }
+
+  #faq {
+    .fax-container {
+      padding: 50px 200px 20px 200px;
+    }
   }
 }
 

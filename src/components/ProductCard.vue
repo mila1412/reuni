@@ -9,11 +9,11 @@
       </div>
     </div>
 
-    <div class="text-subtitle2 text-center">
+    <div class="text-subtitle2 text-center" style="color: #b9887d; font-weight: bold; padding-bottom: 6px">
       NT${{ product.price }}
     </div>
     <div class="text-center">
-      <q-btn flat class="text-product" @click="addCart">加入購物車</q-btn>
+      <q-btn outline class="text-product" @click="addCart">加入購物車</q-btn>
     </div>
   </div>
 </template>

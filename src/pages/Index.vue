@@ -23,7 +23,7 @@
     <div class="container">
       <!-- 本月熱銷 -->
       <div class="text-center">
-        <h4>本月熱銷</h4>
+        <h4 class="index-title">本月熱銷</h4>
         <p class="q-pt-sm q-pb-lg">BESTSELLER</p>
         <div class="row">
           <div class="col-6 col-lg-3">
@@ -54,7 +54,7 @@
       </div>
       <!-- 關於我們 -->
       <div class="text-center" style="padding-top: 80px;">
-        <h4>關於我們</h4>
+        <h4  class="index-title">關於我們</h4>
         <p class="q-pt-sm">ABOUT US</p>
         <div class="row q-pa-lg">
           <div class="col-12 col-lg-6">
@@ -75,7 +75,7 @@
       </div>
       <!-- 顧客回饋 -->
       <div class="text-center" style="padding-top: 80px;">
-        <h4>顧客回饋</h4>
+        <h4 class="index-title">顧客回饋</h4>
         <p class="q-pt-sm q-pb-lg">FEEDBACK FROM INSTAGRAM</p>
         <div class="q-px-lg">
           <q-carousel
@@ -156,7 +156,7 @@
       </div>
       <!-- 甜點直播間 -->
       <div class="text-center" style="padding-top: 80px;">
-        <h4>甜點直播間</h4>
+        <h4 class="index-title">甜點直播間</h4>
         <p class="q-pt-sm">VIDEOS</p>
         <div class="row">
           <div class="col-12 col-lg-4 q-pa-lg">

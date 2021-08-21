@@ -175,7 +175,7 @@
             </q-item-section>
           </q-item>
         </q-list>
-        <div class="q-my-md text-center">
+        <div class="q-mt-lg text-center">
           <q-btn class="bg-cart-red full-width" @click="checkout">確認訂購</q-btn>
         </div>
       </div>

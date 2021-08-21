@@ -3,10 +3,11 @@
     id="login"
     class="row justify-center items-center"
   >
-    <div class="column q-pa-lg" style="padding-top: 70px">
+    <div class="bg-image"></div>
+    <div class="bg-form column q-pa-lg">
       <div class="row">
         <q-card square style="width: 300px; height: 380px;">
-          <q-card-section class="bg-brand text-center">
+          <q-card-section class="bg-login text-center">
             <h4 class="text-h5 text-white">登入</h4>
           </q-card-section>
           <q-card-section>
@@ -52,7 +53,7 @@
                 </template>
               </q-input>
               <div class="q-pt-lg">
-                <q-btn unelevated size="lg" class="full-width bg-brand text-white" label="送出" type="submit" />
+                <q-btn outline unelevated size="lg" class="full-width text-login" label="送出" type="submit" />
               </div>
             </q-form>
           </q-card-section>
