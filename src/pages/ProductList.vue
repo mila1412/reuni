@@ -98,7 +98,7 @@
           </div>
         </div>
         <div class="col-10">
-          <div class="row">
+          <div class="row" style="padding-bottom: 50px;">
             <div class="col-12 col-md-6 col-lg-4 col-xl-3" v-for="product in filterProducts" :key="product._id">
               <ProductCard :product="product"></ProductCard>
             </div>

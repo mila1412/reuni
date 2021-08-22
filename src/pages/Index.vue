@@ -155,7 +155,7 @@
       </div>
       </div>
       <!-- 甜點直播間 -->
-      <div class="text-center" style="padding-top: 80px;">
+      <div class="text-center" style="padding: 80px 0 50px 0;">
         <h4 class="index-title">甜點直播間</h4>
         <p class="q-pt-sm">VIDEOS</p>
         <div class="row">
