@@ -8,7 +8,7 @@
             <!-- logo -->
             <div class="text-center mobile-hide">
               <router-link to='/'>
-                <q-img :src="require('../assets/logoword.png')" style="width: 180px; margin: 20px 0 20px 0px" />
+                <q-img :src="require('../assets/logo.png')" style="width: 180px; margin: 20px 0 20px 0px" />
               </router-link>
             </div>
             <div class="mobile-only">
