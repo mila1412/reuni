@@ -1,7 +1,7 @@
 <template>
   <q-page id="adminorders" class="q-pa-lg">
     <div class="container">
-      <h5 class="text-bold text-grey-9 q-mb-md">訂單管理</h5>
+      <h5 class="text-bold text-grey-9 q-mb-lg">訂單管理</h5>
       <q-table
         :data="table.data"
         :columns="table.columns"

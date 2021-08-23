@@ -2,6 +2,11 @@
   <q-page id="adminsingleorders" class="q-pa-lg">
     <div class="container">
       <h5 class="text-bold text-grey-9 q-mb-md">訂單管理</h5>
+      <ul class="q-mb-lg q-ml-lg" style="white-space: pre-line; font-size: 14px; font-weight: bold;">
+        <li>姓名：{{ name }}</li>
+        <li>信箱：{{ email }}</li>
+        <li>電話：{{ phone }}</li>
+      </ul>
       <q-table
         :data="table.data"
         :columns="table.columns"
@@ -29,12 +34,6 @@
             {{ props.row.price * props.row.amount }}
           </q-td>
         </template>
-        <template v-slot:body-cell-info="props">
-          <q-td :props="props" style="white-space: pre-line">姓名：{{ name }}
-            信箱：{{ email }}
-            電話：{{ phone }}
-          </q-td>
-        </template>
       </q-table>
       <div class="sum flex justify-end q-pa-md">
         <div>
@@ -57,7 +56,6 @@ export default {
       delivery: 0,
       table: {
         columns: [
-          { name: 'info', field: 'info', align: 'left', label: '收件人資料', style: 'width: 300px' },
           { name: 'image1', field: 'image1', align: 'center', label: '商品明細', style: 'width: 100px' },
           { name: 'name', field: 'name', align: 'left', label: '', style: 'width: 100px' },
           { name: 'amount', field: 'amount', align: 'center', label: '數量', style: 'width: 200px' },
@@ -96,6 +94,7 @@ export default {
         return item
       })
       // console.log(data.result)
+      console.log(this.table.columns)
     } catch (error) {
       console.log(error)
       this.$q.notify({

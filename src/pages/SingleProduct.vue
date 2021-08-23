@@ -99,7 +99,8 @@
             所以週六寄出基本上會在周二才到貨。
             外縣市宅配請先於到貨日前三天將款項匯款完成，
             並告知其帳號後五碼，我們將會排入製程並完成配送。
-            <img :src="require('../assets/line.png')" class="line">
+            <img :src="require('../assets/line.png')" class="line mobile-hide">
+            <img :src="require('../assets/line.png')" class="mobile-only" height="40px">
             宅配途中因路面顛簸可能造成的輕微毀損風險請自負，
             如不能接受請勿下單。
             如因宅配人為疏失造成的嚴重損壞，請於第一時間拍照存證與我們聯繫，
@@ -112,7 +113,8 @@
             甜點皆以冷凍方式交貨，
             取貨後請於冰箱冷藏解凍三至五小時，
             <h6 class="text-red text-weight-bold q-mt-md">請勿於室溫下解凍！</h6>
-            <img :src="require('../assets/line.png')" class="line">
+            <img :src="require('../assets/line.png')" class="line mobile-hide">
+            <img :src="require('../assets/line.png')" class="mobile-only" height="40px">
             若要馬上食用可事先告知，會以冷藏或半冷凍方式交貨。
             為求商品品質，欲將甜點攜帶至中北部者，
             需自備「保冷袋+冷媒」至目的地後能冷藏或冷凍保存再食用，才可幫忙排單。

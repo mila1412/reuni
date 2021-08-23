@@ -121,7 +121,6 @@
                 filled
                 v-model="coupon"
                 label="請輸入優惠券代碼"
-                :rules="[ val => val && val.length > 0 ]"
               />
             </div>
             <div class="face-text q-px-md q-pb-md" style="border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 4px;">
