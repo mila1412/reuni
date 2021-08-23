@@ -151,16 +151,16 @@
           <div class="col-12 col-lg-4 q-pa-lg">
             <q-video
               :ratio="1"
-              :src="require('../assets/v4.mp4')"
+              :src="require('../assets/v2.mp4')"
             />
             <p class="q-pa-lg" style="font-weight:bold;">《棉花糖餅乾出爐》</p>
           </div>
           <div class="col-12 col-lg-4 q-pa-lg">
             <q-video
               :ratio="1"
-              :src="require('../assets/v4.mp4')"
+              :src="require('../assets/v3.mp4')"
             />
-            <p class="q-pa-lg" style="font-weight:bold;">《棉花糖餅乾出爐》</p>
+            <p class="q-pa-lg" style="font-weight:bold;">《手工翻炒雪Q餅》</p>
           </div>
         </div>
       </div>
