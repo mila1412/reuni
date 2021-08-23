@@ -146,7 +146,7 @@
               :ratio="1"
               :src="require('../assets/v1.mp4')"
             />
-            <p class="q-pa-lg" style="font-weight:bold;">《千層薄餅皮秘訣》</p>
+            <p class="q-pa-lg" style="font-weight:bold;">《千層蛋糕製作》</p>
           </div>
           <div class="col-12 col-lg-4 q-pa-lg">
             <q-video
@@ -160,7 +160,7 @@
               :ratio="1"
               :src="require('../assets/v3.mp4')"
             />
-            <p class="q-pa-lg" style="font-weight:bold;">《手工翻炒雪Q餅》</p>
+            <p class="q-pa-lg" style="font-weight:bold;">《焦香千層薄餅皮》</p>
           </div>
         </div>
       </div>
