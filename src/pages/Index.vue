@@ -26,29 +26,11 @@
         <h4 class="index-title">本月熱銷</h4>
         <p class="q-pt-sm q-pb-lg">BESTSELLER</p>
         <div class="row">
-          <div class="col-6 col-lg-3">
-            <router-link :to="'/product/'+products[0]._id">
-              <q-img :src="products[0].image1" class="image"/>
+          <div class="col-6 col-lg-3" v-for="product in products" :key="product._id">
+            <router-link :to="'/product/'+product._id">
+              <q-img :src="product.image1" class="image"/>
             </router-link>
-            <p style="margin-top: 10px">{{ products[0].name }}</p>
-          </div>
-          <div class="col-6 col-lg-3">
-            <router-link :to="'/product/'+products[1]._id">
-              <q-img :src="products[1].image1" class="image"/>
-            </router-link>
-            <p style="margin-top: 10px">{{ products[1].name }}</p>
-          </div>
-          <div class="col-6 col-lg-3">
-            <router-link :to="'/product/'+products[2]._id">
-              <q-img :src="products[2].image1" class="image"/>
-            </router-link>
-            <p style="margin-top: 10px">{{ products[2].name }}</p>
-          </div>
-          <div class="col-6 col-lg-3">
-            <router-link :to="'/product/'+products[3]._id">
-              <q-img :src="products[3].image1" class="image"/>
-            </router-link>
-            <p style="margin-top: 10px">{{ products[3].name }}</p>
+            <p style="margin-top: 10px">{{ product.name }}</p>
           </div>
         </div>
       </div>
