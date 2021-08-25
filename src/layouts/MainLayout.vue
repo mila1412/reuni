@@ -94,7 +94,7 @@
     </q-header>
 
     <q-page-container>
-      <router-view />
+      <router-view :key="$route.fullPath" />
     </q-page-container>
 
     <q-footer class="bg-grey-7 text-white">
