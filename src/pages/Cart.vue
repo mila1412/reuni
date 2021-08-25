@@ -232,15 +232,15 @@ export default {
   methods: {
     deliveryHome () {
       this.delivery = 160
-      this.deliveryStatus = true
+      // this.deliveryStatus = true
     },
     delivery711 () {
       this.delivery = 170
-      this.deliveryStatus = true
+      // this.deliveryStatus = true
     },
     deliveryPerson () {
       this.delivery = 0
-      this.deliveryStatus = true
+      // this.deliveryStatus = true
     },
     async numberSub (index) {
       if (this.table.data[index].number > 0) {

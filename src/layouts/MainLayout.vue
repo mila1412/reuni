@@ -52,9 +52,11 @@
                       <q-item>
                         <q-item-section>
                           <q-item-label>
-                            <q-avatar size="35px">
-                              <img :src="fav.product.image1">
-                            </q-avatar>
+                            <router-link :to="'/product/'+fav.product._id">
+                              <q-avatar size="35px">
+                                <img :src="fav.product.image1">
+                              </q-avatar>
+                            </router-link>
                           </q-item-label>
                         </q-item-section>
                         <q-item-section>
@@ -199,7 +201,7 @@ export default {
         })
       }
     },
-    // 我的最愛加入購物車
+    // 我的最愛加入購物車後刪掉商品
     async addCart (id) {
       this.$store.dispatch('user/addCart', { product: id }).then((res) => {
         this.$q.notify({
