@@ -415,6 +415,18 @@ export default {
         if (data.image4) {
           data.image44 = `${process.env.API_URL}/files/${data.image4}`
         }
+        if (!data.image1) {
+          data.image1 = `${process.env.API_URL}/files/undefined`
+        }
+        if (!data.image2) {
+          data.image2 = `${process.env.API_URL}/files/undefined`
+        }
+        if (!data.image3) {
+          data.image3 = `${process.env.API_URL}/files/undefined`
+        }
+        if (!data.image4) {
+          data.image4 = `${process.env.API_URL}/files/undefined`
+        }
         return data
       })
     } catch (error) {
