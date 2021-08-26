@@ -138,7 +138,7 @@ export default {
           textColor: 'white',
           position: 'top'
         })
-        this.$router.push('/')
+        this.$router.push('/login')
       } catch (error) {
         this.$q.notify({
           message: error.response.data.message,
