@@ -93,9 +93,9 @@
       </q-toolbar>
     </q-header>
 
-    <q-page-container>
+    <vue-page-transition name="fade-in-right">
       <router-view :key="$route.fullPath" />
-    </q-page-container>
+    </vue-page-transition>
     <q-footer class="bg-grey-7 text-white">
       <q-toolbar>
         <q-toolbar-title class="text-center">

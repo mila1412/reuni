@@ -21,9 +21,9 @@
       </div>
     </q-header>
 
-    <q-page-container style="padding:50px 0px 50px 0">
+    <vue-page-transition  name="fade-in-right" style="padding:50px 0px 50px 0">
       <router-view />
-    </q-page-container>
+    </vue-page-transition>
   </q-layout>
 </template>
 
