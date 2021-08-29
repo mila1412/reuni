@@ -96,7 +96,6 @@
     <q-page-container>
       <router-view :key="$route.fullPath" />
     </q-page-container>
-
     <q-footer class="bg-grey-7 text-white">
       <q-toolbar>
         <q-toolbar-title class="text-center">
@@ -116,6 +115,24 @@
 </template>
 
 <script>
+// header 動畫
+const bodyClass = document.body.classList
+let lastScrollY = 0
+window.addEventListener('scroll', function () {
+  const st = this.scrollY
+  if (st < lastScrollY) {
+    // 滾輪往上
+    bodyClass.remove('hideUp')
+    bodyClass.add('hideDown')
+  } else {
+    // 滾輪往下
+    bodyClass.remove('hideDown')
+    bodyClass.add('hideUp')
+  }
+  console.log(st)
+  lastScrollY = st
+})
+
 export default {
   name: 'MainLayout',
   data () {

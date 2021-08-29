@@ -1,7 +1,9 @@
 <template>
   <div class="q-pa-md">
     <router-link class="image" :to="'/product/'+product._id">
-      <q-img :src="product.image1" />
+      <div class="image">
+        <q-img :src="product.image1" class="inside-image"/>
+      </div>
     </router-link>
     <div class="text-center q-py-xs">
       <div class="text-h6">
@@ -68,8 +70,19 @@ export default {
 </script>
 
 <style lang="scss">
+.image {
+  margin: auto;
+  overflow: hidden;
+}
+
+.inside-image {
+  transition: .5s;
+}
+
 .image:hover {
   filter: opacity(0.5);
-  transition: .5s;
+  & .inside-image {
+    transform: scale(1.2);
+  }
 }
 </style>

@@ -20,6 +20,9 @@
         <q-carousel-slide :name="4" :img-src="require('../assets/ca1.jpg')" />
       </q-carousel>
     </div>
+    <q-img class="parallax01 planet-animate" :src="require('../assets/cake1.png')"/>
+    <q-img class="parallax02 planet-animate" :src="require('../assets/cake2.png')"/>
+    <q-img class="parallax03 planet-animate" :src="require('../assets/cake4.png')"/>
     <div class="container">
       <!-- 本月熱銷 -->
       <div class="text-center">
@@ -28,7 +31,9 @@
         <div class="row">
           <div class="col-6 col-lg-3" v-for="product in products" :key="product._id">
             <router-link :to="'/product/'+product._id">
-              <q-img :src="product.image1" class="image"/>
+              <div class="image">
+                <q-img :src="product.image1" class="inside-image"/>
+              </div>
             </router-link>
             <p style="margin-top: 10px">{{ product.name }}</p>
           </div>
@@ -55,6 +60,7 @@
           </div>
         </div>
       </div>
+
       <!-- 顧客回饋 -->
       <div class="text-center" style="padding-top: 80px;">
         <h4 class="index-title">顧客回饋</h4>
@@ -123,6 +129,7 @@
           </q-carousel>
         </div>
       </div>
+
       <!-- 即刻訂購 -->
       <div style="padding-top: 100px">
       <div class="q-pa-lg">
@@ -165,10 +172,43 @@
         </div>
       </div>
     </div>
+    <q-page-scroller position="bottom-right" :scroll-offset="2800" :offset="[18, 18]">
+      <q-btn fab icon="keyboard_arrow_up" color="blue-grey-3" />
+    </q-page-scroller>
   </q-page>
 </template>
 
 <script>
+import { gsap, ScrollTrigger } from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
+gsap.to('.parallax01', {
+  scrollTrigger: {
+    trigger: '.parallax01',
+    start: 'top 50%',
+    end: 'bottom 50%',
+    scrub: 1
+  },
+  top: '50%'
+})
+gsap.to('.parallax02', {
+  scrollTrigger: {
+    trigger: '.parallax02',
+    start: 'top 50%',
+    end: 'bottom 50%',
+    scrub: 1
+  },
+  top: '50%'
+})
+gsap.to('.parallax03', {
+  scrollTrigger: {
+    trigger: '.parallax03',
+    start: 'top 50%',
+    end: 'bottom 50%',
+    scrub: 1
+  },
+  top: '50%'
+})
+
 export default {
   name: 'PageIndex',
   data () {

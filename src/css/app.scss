@@ -72,6 +72,21 @@ body {
 }
 
 // header
+.header {
+  transition: 4s;
+  box-shadow: 0 0 8px rgba(161, 116, 116, 0.2);
+}
+
+.hideUp header {
+  top: -122px;
+  transition: 1s;
+}
+
+.hideDown header {
+  top: 0px;
+  transition: 1s;
+}
+
 .text-icon {
   color: #565656;
 }
@@ -291,7 +306,7 @@ body {
     max-width: 540px;
   }
 
-  // mainlayou nav
+  // mainlayout nav
   .text-option {
     width: 25%;
   }
@@ -690,7 +705,7 @@ body {
     max-width: 1320px;
   }
 
-  // mainlayou nav
+  // mainlayout nav
   .text-option {
     width: 20%;
   }
@@ -1047,9 +1062,65 @@ body {
   }
 }
 
-#index { 
+#index {
+  .image {
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .inside-image {
+    transition: .5s;
+  }
+
   .image:hover {
     filter: opacity(0.5);
-    transition: .5s;
+    & .inside-image {
+      transform: scale(1.2);
+    }
+  }
+
+  .parallax01 {
+    position: absolute;
+    left: 3%;
+    top: 35%;
+    width: 200px;
+    opacity: 0.2;
+    filter: grayscale(1);
+  }
+
+  .parallax02 {
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    width: 200px;
+    opacity: 0.2;
+    filter: grayscale(1);
+  }
+
+  .parallax03 {
+    position: absolute;
+    left: 3%;
+    top: 80%;
+    width: 200px;
+    opacity: 0.2;
+    filter: grayscale(1);
+  }
+
+  .planet-animate {
+    animation: animate 30s infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(100px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 }
