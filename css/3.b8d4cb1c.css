@@ -1,0 +1,1 @@
+.image{margin:auto;overflow:hidden}.inside-image{transition:0.5s}.image:hover{filter:opacity(0.5)}.image:hover .inside-image{transform:scale(1.2)}
