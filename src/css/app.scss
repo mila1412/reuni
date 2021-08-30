@@ -71,6 +71,22 @@ body {
   width: 33.3333%;
 }
 
+// header
+.header {
+  transition: 4s;
+  box-shadow: 0 0 8px rgba(161, 116, 116, 0.2);
+}
+
+.hideUp header {
+  top: -122px;
+  transition: 1s;
+}
+
+.hideDown header {
+  top: 0px;
+  transition: 1s;
+}
+
 .text-icon {
   color: #565656;
 }
@@ -703,21 +719,6 @@ body {
 
 // 單頁
 #mainlayout {
-  // header
-.header {
-  transition: 4s;
-  box-shadow: 0 0 8px rgba(161, 116, 116, 0.2);
-}
-
-.hideUp header {
-  top: -122px;
-  transition: 1s;
-}
-
-.hideDown header {
-  top: 0px;
-  transition: 1s;
-}
   .q-toolbar__title {
     padding: 0;
   }
