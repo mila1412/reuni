@@ -22,7 +22,7 @@
     </q-header>
 
     <q-page-container>
-      <vue-page-transition name="fade-in-right" style="padding:50px 0px 50px 0">
+      <vue-page-transition name="fade-in-right">
         <router-view />
       </vue-page-transition>
     </q-page-container>

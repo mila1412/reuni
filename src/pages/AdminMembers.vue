@@ -48,6 +48,7 @@ export default {
       })
       this.table.data = data.result.map(data => {
         data.birth = new Date(data.birth).toLocaleDateString()
+        date.date = new Date(date.date).toLocaleDateString()
         return data
       })
       console.log(this.table.data)
