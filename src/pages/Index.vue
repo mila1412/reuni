@@ -21,8 +21,8 @@
       </q-carousel>
     </div>
     <q-img class="parallax01 planet-animate" :src="require('../assets/cake1.png')"/>
-    <q-img class="parallax02 planet-animate" :src="require('../assets/cake2.png')"/>
-    <q-img class="parallax03 planet-animate" :src="require('../assets/cake4.png')"/>
+    <!-- <q-img class="parallax02 planet-animate" :src="require('../assets/cake2.png')"/>
+    <q-img class="parallax03 planet-animate" :src="require('../assets/cake4.png')"/> -->
     <div class="container">
       <!-- 本月熱銷 -->
       <div class="text-center">
@@ -190,24 +190,24 @@ gsap.to('.parallax01', {
   },
   top: '50%'
 })
-gsap.to('.parallax02', {
-  scrollTrigger: {
-    trigger: '.parallax02',
-    start: 'top 50%',
-    end: 'bottom 50%',
-    scrub: 1
-  },
-  top: '50%'
-})
-gsap.to('.parallax03', {
-  scrollTrigger: {
-    trigger: '.parallax03',
-    start: 'top 50%',
-    end: 'bottom 50%',
-    scrub: 1
-  },
-  top: '50%'
-})
+// gsap.to('.parallax02', {
+//   scrollTrigger: {
+//     trigger: '.parallax02',
+//     start: 'top 50%',
+//     end: 'bottom 50%',
+//     scrub: 1
+//   },
+//   top: '50%'
+// })
+// gsap.to('.parallax03', {
+//   scrollTrigger: {
+//     trigger: '.parallax03',
+//     start: 'top 50%',
+//     end: 'bottom 50%',
+//     scrub: 1
+//   },
+//   top: '50%'
+// })
 
 export default {
   name: 'PageIndex',

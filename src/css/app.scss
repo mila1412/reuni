@@ -1082,29 +1082,29 @@ body {
   .parallax01 {
     position: absolute;
     left: 3%;
-    top: 35%;
+    top: 38%;
     width: 200px;
     opacity: 0.2;
     filter: grayscale(1);
   }
 
-  .parallax02 {
-    position: absolute;
-    left: 80%;
-    top: 50%;
-    width: 200px;
-    opacity: 0.2;
-    filter: grayscale(1);
-  }
+  // .parallax02 {
+  //   position: absolute;
+  //   left: 80%;
+  //   top: 50%;
+  //   width: 200px;
+  //   opacity: 0.2;
+  //   filter: grayscale(1);
+  // }
 
-  .parallax03 {
-    position: absolute;
-    left: 3%;
-    top: 80%;
-    width: 200px;
-    opacity: 0.2;
-    filter: grayscale(1);
-  }
+  // .parallax03 {
+  //   position: absolute;
+  //   left: 3%;
+  //   top: 80%;
+  //   width: 200px;
+  //   opacity: 0.2;
+  //   filter: grayscale(1);
+  // }
 
   .planet-animate {
     animation: animate 30s infinite;
