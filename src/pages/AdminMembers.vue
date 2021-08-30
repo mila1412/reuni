@@ -10,45 +10,6 @@
         flat
         bordered
       >
-        <!-- 說明 -->
-        <template v-slot:body-cell-description="props">
-          <q-td :props="props">
-            <p class="text-truncate">{{ props.row.description }}</p>
-          </q-td>
-        </template>
-        <!-- 日期 -->
-        <template v-slot:body-cell-date="props">
-          <q-td :props="props">
-            {{ new Date(props.row.date).toLocaleDateString() }}
-          </q-td>
-        </template>
-        <!-- 上架 -->
-        <template v-slot:body-cell-post="props">
-          <q-td :props="props">
-            <div>
-              <q-chip text-color="white" square
-                      :color="options.post.find(option => option.value === props.row.post).color"
-                      :label="options.post.find(option => option.value === props.row.post).label" />
-            </div>
-          </q-td>
-        </template>
-        <!-- 圖片 -->
-        <template v-slot:body-cell-image1="props">
-          <q-td :props="props">
-            <q-avatar size="50px">
-              <img :src="props.row.image1">
-            </q-avatar>
-            <q-icon name="close" @click="delFile(props.row)" class="delfile cursor-pointer" />
-          </q-td>
-        </template>
-        <!-- 編輯 -->
-        <template v-slot:body-cell-operation="props">
-          <q-td :props="props">
-            <q-btn unelevated class="bg-edit" @click="editDialog(props.row)">
-              <span> 編輯</span>
-            </q-btn>
-          </q-td>
-        </template>
       </q-table>
     </div>
   </q-page>
